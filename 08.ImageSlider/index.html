@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="description" content="Image Slider">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="./jquery-3.1.1.min.js"></script>
+    <title>Image Slider</title>
+  </head>
+  <body>
+    <h1>Image Slider</h1>
+    <div class="wrapper" style="max-width: 100px;position: relative; left: 100px">
+      <img src="./images/1.jpg" class="mySlide" style="width: 100px" />
+      <img src="./images/2.jpg" class="mySlide" style="width: 100px" />
+      <img src="./images/3.jpg" class="mySlide" style="width: 100px" />
+      <img src="./images/4.jpg" class="mySlide" style="width: 100px" />
+      <img src="./images/5.jpg" class="mySlide" style="width: 100px" />
+      <img src="./images/6.jpg" class="mySlide" style="width: 100px" />
+      <img src="./images/7.jpg" class="mySlide" style="width: 100px" />
+      <a class="btn1" style="position: absolute; top: 45%; left: 0" onclick="plusDiv(-1)"><span id='btnl'>&lt;</span></a>
+      <a class="btn1" style="position: absolute; top: 45%; right: 0" onclick="plusDiv(-1)"><span id='btnr' >&gt;</span></a>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
