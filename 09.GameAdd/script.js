@@ -18,15 +18,21 @@ btn.onclick = function() {
   if(value==answer){
     alert('true');
   }else{
-    alert('false');
+    alert('false, the correct answer is ' + answer);
   }
+  document.querySelector('input[type=text]').value = "";
+  document.getElementById("num1").innerHTML = "";
+  document.getElementById("num2").innerHTML = "";
+  num1 = Math.floor((Math.random()*10) + 1);
+  num2 = Math.floor((Math.random()*10) + 1);
+  document.getElementById("num1").innerHTML = num1;
+  document.getElementById("num2").innerHTML = num2;
+
+  answer = num1 + num2; 
 }
 
-// $('#check').onclick = function(){
-//   var guest = $('#result').val();
-//   if (guest==answer){
-//     alert('true');
-//   } else {
-//     alert('false');
-//   }
-// }
+
+$('#testOnly').click(function(){
+  alert("one");
+});
+
