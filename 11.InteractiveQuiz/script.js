@@ -20,9 +20,10 @@ $(document).ready(function(){
   $(this).find('.nextButton').on('click',function(){
     if (!quizOver){
       value=$('input[type="radio"]:checked').val();
+      quizMsg=$(document).find('.quizMessage');
       if (value==undefined){
-        $(document).find('.quizMessage').text('Please select an answer');
-        $(document).find('.quizMessage').show();
+        quizMsg.text('Please select an answer');
+        quizMsg.show();
       }else{
         quizMsg.hide();
         if (value == Questions[currentQuestion].correctAnswer){
@@ -33,7 +34,7 @@ $(document).ready(function(){
           displayCurrentQuestion();
         }else{
           displayScore();
-          $(document).find('.nextButon').text('Play again?');
+          $(document).find('.nextButton').text('Play again?');
           quizOver=true
         }
       }
@@ -53,8 +54,8 @@ function displayCurrentQuestion(){
   var question = Questions[currentQuestion].question;
   //?????
   //var questionClass = $(document).find('.quizContainer > .question');
-  var questionClass = $(document).find('.quizContainer');
-  var choiceList = $(document).find(".quizContainer > .choiceList");
+  var questionClass = $(document).find('.question');
+  var choiceList = $(document).find("#choiceList");
   //?????
   var numChoices = Questions[currentQuestion].choices.length;
   $(questionClass).text(question);
@@ -74,8 +75,8 @@ function resetQuiz(){
 }
 
 function displayScore(){
-  $(document).find(".quizContainer > .result").text("your score :" + correctAnswer);
-  $(document).find(".quizContainer > .result").show;
+  $(document).find(".result").text("your score :" + correctAnswer);
+  $(document).find(".result").show();
 }
 
 function hideScore(){
